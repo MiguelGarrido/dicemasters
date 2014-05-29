@@ -11,9 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140527203459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "affiliations", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "characters", force: true do |t|
+    t.string   "name"
+    t.text     "text"
+    t.string   "global"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "rarity_id"
+    t.string   "subtitle"
+    t.integer  "cost"
+    t.integer  "collector_number"
+    t.integer  "die_limit"
+    t.integer  "type_id"
+    t.integer  "affiliation_id"
+  end
+
+  add_index "characters", ["affiliation_id"], name: "index_characters_on_affiliation_id", using: :btree
+  add_index "characters", ["rarity_id"], name: "index_characters_on_rarity_id", using: :btree
+  add_index "characters", ["type_id"], name: "index_characters_on_type_id", using: :btree
+
+  create_table "rarities", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "types", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

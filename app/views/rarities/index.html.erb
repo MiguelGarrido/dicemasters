@@ -1,0 +1,18 @@
+<h1>Listing rarities</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+<% @rarities.each do |rarity| %>
+  <tr>
+    <td><%= rarity.name %></td>
+    <td><%= link_to 'Show', type_path(rarity) %></td>
+    <td><%= link_to 'Edit', edit_type_path(rarity) %></td>
+    <td><%= link_to 'Destroy', type_path(rarity),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+<%= link_to 'New type', new_rarity_path %>
+</table>

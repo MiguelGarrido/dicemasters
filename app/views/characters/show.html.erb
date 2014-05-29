@@ -1,0 +1,51 @@
+<p>
+  <strong>Name:</strong>
+  <%= @character.name %>
+</p>
+ 
+<p>
+  <strong>Subtitle:</strong>
+  <%= @character.subtitle %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @character.text %>
+</p>
+
+<p>
+  <strong>Global:</strong>
+  <%= @character.global %>
+</p>
+ 
+<p>
+  <strong>Type:</strong>
+  <%= @character.type.name if @character.type %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @character.cost %>
+</p>
+
+<p>
+  <strong>Affiliation:</strong>
+  <%= @character.affiliation.name if @character.affiliation %>
+</p>
+
+<p>
+  <strong>Collector number:</strong>
+  <%= @character.collector_number %>
+</p>
+
+<p>
+  <strong>Rarity:</strong>
+  <%= @character.rarity.name if @character.rarity %>
+</p>
+
+<p>
+  <strong>Die limit:</strong>
+  <%= @character.die_limit %>
+</p>
+
+<%= link_to 'Back', characters_path %>

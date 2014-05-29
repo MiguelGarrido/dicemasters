@@ -1,0 +1,66 @@
+<%= form_for @character do |f| %>
+  <% if @character.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@character.errors.count, "error") %> prohibited
+      this character from being saved:</h2>
+    <ul>
+    <% @character.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>  
+
+  <p>
+    <%= f.label :subtitle %><br>
+    <%= f.text_field :subtitle %>
+  </p>
+
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+
+  <p>
+    <%= f.label :global %><br>
+    <%= f.text_field :global %>
+  </p>
+
+  <p>
+    <%= f.label :type %><br>
+    <%= f.select :type_id, @types if @types %>
+  </p>
+  
+  <p>
+    <%= f.label :cost %><br>
+    <%= f.text_field :cost %>
+  </p>  
+
+  <p>
+    <%= f.label :affiliation %><br>
+    <%= f.select :affiliation_id, @affiliations if @affiliations %>
+  </p>
+
+  <p>
+    <%= f.label :collector_number %><br>
+    <%= f.text_field :collector_number %>
+  </p>
+
+  <p>
+    <%= f.label :rarity %><br>
+    <%= f.select :rarity_id, @rarities if @rarities %>
+  </p>
+
+  <p>
+    <%= f.label :die_limit %><br>
+    <%= f.text_field :die_limit %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>  
+<% end %>

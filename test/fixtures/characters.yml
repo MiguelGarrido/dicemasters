@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  name: MyString
+  subtitle: MyString
+  text: MyText
+  global: MyString
+  affiliation_id: 1
+  rarity_id: 1
+  type_id: 1
+  cost: 3
+
+two:
+  id: 2
+  name: MyString
+  subtitle: MyString
+  text: MyText
+  global: MyString
+  affiliation_id: 2
+  rarity_id: 1
+  type_id: 1
+  cost: 3
