@@ -81,7 +81,7 @@ Dicemasters::Application.configure do
   # AWS S3
   config.paperclip_defaults = {
     :storage => :s3,
-    :s3_host_name => 's3-eu-west-1.amazonaws.com',
+    :s3_host_name => 's3.amazonaws.com',
     :s3_protocol => 'https',
     :s3_permissions => :private,
     :s3_credentials => {
