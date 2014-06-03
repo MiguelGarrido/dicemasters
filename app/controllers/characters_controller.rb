@@ -1,9 +1,9 @@
 class CharactersController < ApplicationController
 
-  before_filter :load_selects, only: [:new, :edit]
+  before_filter :load_selects, only: [:new, :edit, :create]
 
   def index
-    @characters = Character.all
+    @characters = Character.order(:collector_number)
   end
 
   def show
@@ -19,7 +19,7 @@ class CharactersController < ApplicationController
 
  
     if @character.save
-      redirect_to @character
+      redirect_to characters_path
     else
       render 'new'
     end

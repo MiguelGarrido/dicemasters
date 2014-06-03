@@ -1,9 +1,11 @@
 <h1>Listing characters</h1>
-<table border=1>
+<table>
   <tr>
     <th>Name</th>
     <th>Subtitle</th>
-    <th>Text</th>
+    <th>Ability</th>
+    <th>* Ability</th>
+    <th>** Ability</th>
     <th>Global</th>
     <th>Type</th>
     <th>Cost</th>
@@ -11,24 +13,26 @@
     <th>#</th>
     <th>Rarity</th>
     <th>Die limit</th>
-    <th colspan="3"></th>
+    <th></th>
   </tr>
  
 <% @characters.each do |character| %>
-  <tr>
-    <td><%= character.name %></td>
-    <td><%= character.subtitle %></td>
-    <td><%= character.text %></td>
-    <td><%= character.global %></td>
-    <td><%= character.type.name %></td>
-    <td><%= character.cost %></td>
-    <td><%= character.affiliation.name %></td>
-    <td><%= character.collector_number %></td>
-    <td><%= character.rarity.name %></td>
-    <td><%= character.die_limit %></td>
-    <td><%= link_to 'Show', character_path(character) %></td>
-    <td><%= link_to 'Edit', edit_character_path(character) %></td>
-    <td><%= link_to 'Destroy', character_path(character),
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    <td class="list_medium"><%= character.name %></td>
+    <td class="list_medium"><%= character.subtitle %></td>
+    <td class="list_large"><%= character.ability %></td>
+    <td class="list_large"><%= character.burst_ability %></td>
+    <td class="list_large"><%= character.double_burst_ability %></td>
+    <td class="list_large"><%= character.global %></td>
+    <td class="list_short"><%= character.type.name %></td>
+    <td class="list_short"><%= character.cost %></td>
+    <td class="list_short"><%= character.affiliation.name %></td>
+    <td class="list_short"><%= character.collector_number %></td>
+    <td class="list_short"><%= character.rarity.name %></td>
+    <td class="list_short"><%= character.die_limit %></td>
+    <td class="list_medium"><%= link_to 'Show', character_path(character) %>
+    <%= link_to 'Edit', edit_character_path(character) %>
+    <%= link_to 'Destroy', character_path(character),
                     method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>

@@ -10,6 +10,12 @@
     </ul>
   </div>
   <% end %>
+
+  <p>
+    <%= f.label :collector_number %><br>
+    <%= f.text_field :collector_number %>
+  </p>
+  
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -21,8 +27,18 @@
   </p>
 
   <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.label :ability %><br>
+    <%= f.text_area :ability %>
+  </p>
+
+  <p>
+    <%= f.label :burst_ability %><br>
+    <%= f.text_area :burst_ability %>
+  </p>
+
+  <p>
+    <%= f.label :double_burst_ability %><br>
+    <%= f.text_area :double_burst_ability %>
   </p>
 
   <p>
@@ -32,7 +48,7 @@
 
   <p>
     <%= f.label :type %><br>
-    <%= f.select :type_id, @types if @types %>
+    <%= f.select :type_id, @types %>
   </p>
   
   <p>
@@ -42,17 +58,12 @@
 
   <p>
     <%= f.label :affiliation %><br>
-    <%= f.select :affiliation_id, @affiliations if @affiliations %>
-  </p>
-
-  <p>
-    <%= f.label :collector_number %><br>
-    <%= f.text_field :collector_number %>
+    <%= f.select :affiliation_id, @affiliations %>
   </p>
 
   <p>
     <%= f.label :rarity %><br>
-    <%= f.select :rarity_id, @rarities if @rarities %>
+    <%= f.select :rarity_id, @rarities %>
   </p>
 
   <p>

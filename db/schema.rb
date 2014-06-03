@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140527203459) do
+ActiveRecord::Schema.define(version: 20140602204445) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 20140527203459) do
 
   create_table "characters", force: true do |t|
     t.string   "name"
-    t.text     "text"
     t.string   "global"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -35,6 +34,9 @@ ActiveRecord::Schema.define(version: 20140527203459) do
     t.integer  "die_limit"
     t.integer  "type_id"
     t.integer  "affiliation_id"
+    t.string   "ability"
+    t.string   "burst_ability"
+    t.string   "double_burst_ability"
   end
 
   add_index "characters", ["affiliation_id"], name: "index_characters_on_affiliation_id", using: :btree

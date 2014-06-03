@@ -33,13 +33,19 @@ gem 'jbuilder', '~> 1.2'
 # Heroku support
 gem 'rails_12factor', group: :production
 
+# Excel importer
+gem 'roo'
+
+# Attachments
+gem "paperclip", "~> 4.1"
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
 group :test do
-	gem 'rspec'
+	gem 'rspec-rails'
 end
 
 ruby "2.1.2"
