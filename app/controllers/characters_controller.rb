@@ -49,7 +49,7 @@ class CharactersController < ApplicationController
   def character_params
     params.require(:character).permit(:name, :text, :global, 
                                       :collector_number, :subtitle, :die_limit, 
-                                      :cost, :type_id, :affiliation_id, :rarity_id) if params[:character]
+                                      :cost, :type_id, :affiliation_id, :rarity_id, :card_image) if params[:character]
   end
 
   def load_selects

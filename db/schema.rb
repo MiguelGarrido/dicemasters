@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140602204445) do
+ActiveRecord::Schema.define(version: 20140603115307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(version: 20140602204445) do
     t.string   "ability"
     t.string   "burst_ability"
     t.string   "double_burst_ability"
+    t.string   "card_image_file_name"
+    t.string   "card_image_content_type"
+    t.integer  "card_image_file_size"
+    t.datetime "card_image_updated_at"
   end
 
   add_index "characters", ["affiliation_id"], name: "index_characters_on_affiliation_id", using: :btree

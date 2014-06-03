@@ -37,7 +37,8 @@ gem 'rails_12factor', group: :production
 gem 'roo'
 
 # Attachments
-gem "paperclip", "~> 4.1"
+gem 'paperclip'
+gem 'aws-sdk'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
