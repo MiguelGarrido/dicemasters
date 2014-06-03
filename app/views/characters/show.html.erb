@@ -60,7 +60,7 @@
 
 <p>
   <strong>Card image:</strong>
-  <%= image_tag friend.avatar.url(:medium) %>
+  <%= image_tag @character.card_image.url(:medium) %>
 </p>
 
 <%= link_to 'Back', characters_path %>
