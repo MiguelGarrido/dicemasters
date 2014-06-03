@@ -39,6 +39,7 @@ gem 'roo'
 # Attachments
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'paperclip-aws', '~> 1.6.8'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
