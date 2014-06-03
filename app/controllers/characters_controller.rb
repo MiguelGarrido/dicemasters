@@ -32,6 +32,10 @@ class CharactersController < ApplicationController
   def update
     @character = Character.find(params[:id])
     
+    puts "ENV['AWS_ACCESS_KEY_ID']=" + ENV['AWS_ACCESS_KEY_ID']
+    puts "ENV['AWS_SECRET_ACCESS_KEY']=" + ENV['AWS_SECRET_ACCESS_KEY']
+    puts "ENV['S3_BUCKET_NAME']=" + ENV['S3_BUCKET_NAME']
+
     if @character.update(character_params)      
       redirect_to @character
     else      
