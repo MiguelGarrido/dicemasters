@@ -42,6 +42,13 @@ gem 'aws-sdk'
 
 #Authentication
 gem 'devise'
+gem 'cancan'
+
+#Admin
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
+gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'formtastic', github: 'justinfrench/formtastic'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

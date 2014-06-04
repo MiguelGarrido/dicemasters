@@ -31,9 +31,13 @@
     <td class="list_short"><%= character.rarity.name %></td>
     <td class="list_short"><%= character.die_limit %></td>
     <td class="list_medium"><%= link_to 'Show', character_path(character) %>
-    <%= link_to 'Edit', edit_character_path(character) %>
+    <% if can? :update, @article %>
+        <%= link_to 'Edit', edit_character_path(character) %>
+    <% end %>
+    <% if can? :delete, @article %>
     <%= link_to 'Destroy', character_path(character),
                     method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 <%= link_to 'New character', new_character_path %>
