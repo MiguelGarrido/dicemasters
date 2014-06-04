@@ -1,20 +1,11 @@
 ActiveAdmin.register Character do
 
-  
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-  #
-  # permit_params :list, :of, :attributes, :on, :model
-  #
-  # or
-  #
-  # permit_params do
-  #  permitted = [:permitted, :attributes]
-  #  permitted << :other if resource.something?
-  #  permitted
-  # end
+  permit_params :name, :text, :global, :collector_number, :subtitle, :die_limit, :cost, :type_id, :affiliation_id, :rarity_id, :card_image
 
-  filter :name  
+  filter :name
+  filter :subtitle
   filter :affiliation
   filter :type
   filter :rarity
@@ -34,4 +25,41 @@ ActiveAdmin.register Character do
     column :rarity
     actions
   end  
+
+ form do |f|
+    f.inputs "Character Details" do
+      f.input :collector_number
+      f.input :name
+      f.input :subtitle
+      f.input :cost
+      f.input :type
+      f.input :affiliation
+      f.input :ability
+      f.input :burst_ability
+      f.input :double_burst_ability
+      f.input :card_image, :hint => f.template.image_tag(character.card_image.url(:medium))      
+      f.input :rarity
+    end
+    f.actions
+  end
+ 
+  show do |ad|
+      attributes_table do
+        row :collector_number
+        row :name
+        row :subtitle
+        row :cost
+        row :type
+        row :affiliation
+        row :ability
+        row :burst_ability
+        row :double_burst_ability
+        row :card_image do
+          image_tag(character.card_image.url(:medium))          
+        end
+        row :rarity                
+      end
+    end
+
+
 end
