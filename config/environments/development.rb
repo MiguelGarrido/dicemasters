@@ -27,12 +27,16 @@ Dicemasters::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  #Devise emailes configuration
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+
  config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['AWS_BUCKET'],
-    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    :bucket => 'dicemasters',
+    :access_key_id => 'AKIAJQQ3SHUH6UJL37DQ',
+    :secret_access_key => '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'
     }
   }
 end
