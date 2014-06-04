@@ -19,17 +19,19 @@ ActiveAdmin.register Character do
   filter :type
   filter :rarity
   config.per_page = 10
-
-  index do
-    column :collector_number
-    column "Name" do |character|
-      link_to character.name, admin_character_path(character)
-    end    
-    column :subtitle
-    column :ability
-    column :burst_ability
-    column :double_burst_ability
-  end
+  config.sort_order = "collector_number_asc"
   
-
+  index do
+    column "#", :collector_number
+    column :name
+    column :subtitle
+    column :cost
+    column :type
+    column :ability
+    column "*", :burst_ability
+    column "**", :double_burst_ability
+    column :affiliation
+    column :rarity
+    actions
+  end  
 end
