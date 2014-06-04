@@ -39,4 +39,5 @@ Dicemasters::Application.configure do
     :secret_access_key => 'abONoz1iVUlDma6RPcoV3s+CWhM07ff5Mm0SekCC'
     }
   }
+
 end
