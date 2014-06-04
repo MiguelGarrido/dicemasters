@@ -8,10 +8,7 @@
 <% @rarities.each do |rarity| %>
   <tr>
     <td><%= rarity.name %></td>
-    <td><%= link_to 'Show', type_path(rarity) %></td>
-    <td><%= link_to 'Edit', edit_rarity_path(rarity) %></td>
-    <td><%= link_to 'Destroy', rarity_path(rarity),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', type_path(rarity) %></td>    
   </tr>
 <% end %>
 <%= link_to 'New type', new_rarity_path %>
