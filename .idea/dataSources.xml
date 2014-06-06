@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2153508582">
+    <data-source source="LOCAL" name="Rails dicemasters: development" uuid="a506f78a-54a1-47de-9002-1105c6c6b2be">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:dicemasters_development</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfcedfc3dfc9dfcfdfc7dfcbdfd9dfdedfcfdfd8dfd9</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails dicemasters: test" uuid="bbc298e4-f6c1-4e12-932c-c675abac1cb3">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:dicemasters_test</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfcedfc3dfc9dfcfdfc7dfcbdfd9dfdedfcfdfd8dfd9</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails dicemasters: production" uuid="4bc8cd69-1b71-4d3a-b075-baf65b79aa1d">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:dicemasters_test</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfcedfc3dfc9dfcfdfc7dfcbdfd9dfdedfcfdfd8dfd9</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
